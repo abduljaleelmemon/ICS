@@ -8,6 +8,7 @@
 
 #### 1. Heat exchager plant
 There are different types of heat exchanger for different purposes. We have modeled shell and tube heat exchanger which is used for heating of the water through steam pressure. The purpose of this plant is to provide desired temperature water after providing the useful information e.g. water initial temperature.
+
 1.1.	3D Modeling
 We are using unity for the 3D modeling of an industrial plant i.e., Shell and tube heat exchanger. We are using different industrial assets offered by unity. Some of the assets are cad files that cannot be imported in unity, so we have converted them into .3d files. Using these assets, we have created a model of a heat exchanger. The main models of this plant are heat exchanger, water tank, steam tank.
  
