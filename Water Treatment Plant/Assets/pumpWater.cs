@@ -27,7 +27,6 @@ public class pumpWater : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
 		//GetComponent<Rigidbody>().velocity += v3Force;
 			transform.position+=v3Force2;
-			
 			yield return new WaitForSeconds(0.1f);
 			//GetComponent<Rigidbody>().velocity -= v3Force;
 			transform.position-=v3Force2;

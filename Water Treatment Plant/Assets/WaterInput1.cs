@@ -7,10 +7,13 @@ public class WaterInput1 : MonoBehaviour
 {	
 	float waterFlowRate=0.9333f;
 	float Water=0f;
+	float maxWaterInTAnk=56f;
+	float waterPercentForbar=0f;
 	private float a=100;
 	private float b=200;
 	private float c=250;
 	private float d=250;
+	public Slider waterLevel; 
     //public TextMeshPro tempC;
 	void OnGUI()
 	{
@@ -21,6 +24,7 @@ public class WaterInput1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {	
+		//waterLevel.value=0;
 		 //StartInv();
          //Start the coroutine we define below named ExampleCoroutine.
         //func();
@@ -31,22 +35,14 @@ public class WaterInput1 : MonoBehaviour
          //Start the coroutine we define below named ExampleCoroutine.
         //func();
     }
-	/**IEnumerator ExampleCoroutine()
-    {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-		//tempC.text = "1 HP pump";
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(1);
-		
-        //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-    }**/
 	public void cancel(){
 		 CancelInvoke("func");
 	}
 	public void func(){
 		Water+=waterFlowRate;
+		waterPercentForbar=(int)(Water/maxWaterInTAnk);
+		//Debug.Log(waterPercentForbar);
+		//waterLevel.value=waterPercentForbar;
 		//StartCoroutine(ExampleCoroutine());
 	}
 }
