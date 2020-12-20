@@ -162,18 +162,19 @@ We have used scripting in water treatment plant to pump fresh water from the riv
 
 #### 3. Air tank control system  
 Air tank control system that comprises of 3 different devices that are air storage tank, air dryer and air compressor. An air compressor converts power into potential energy stored in pressurized air i.e. compressed air which is transferred to air dryer for drying and in last air tank for storage of pressurized air. The main purpose of this plant is to control the pressure of air which is continuously required for further operation.
+
 3.1.	3D Modeling
- 	We have used unity for 3d modeling of Air tank control system. Three main models of this plant are air storage tank, air dryer and air compressor.  Which are connected through pipes. 
- 
+ 	
+We have used unity for 3d modeling of Air tank control system. Three main models of this plant are air storage tank, air dryer and air compressor.  Which are connected through pipes. 
 
 3.2.	Simulation (Coding):
+
 We have used scripting in air control system as to display the pressure in using a digital analogue and display the frequency using various formulae
+ 
  3.2.1	Motor Rotation (simulation) along with frequency of motor rotation. 
             
  3.2.2	Air Tank with digital manometer for air pressure.
-
  
-
  3.2.3	Set point takes input for desired air pressure in our air tank, once input is given and played button is pressed the compressor will try to adjust the air pressure inside the tank. we can restart our process by clicking on restart button, for pausing we can press on pause button. On the right-hand Air tank pressure and frequency is displayed for better visibility.
 
  
