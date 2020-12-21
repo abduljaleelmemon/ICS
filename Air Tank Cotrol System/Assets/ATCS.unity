@@ -361,7 +361,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 21148262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180618837}
+        m_MethodName: pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &21148262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,7 +1917,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 665400717}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180618837}
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &665400717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2308,7 @@ GameObject:
   - component: {fileID: 841304490}
   - component: {fileID: 841304489}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: freqText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3127,7 +3149,7 @@ GameObject:
   - component: {fileID: 1056117869}
   - component: {fileID: 1056117868}
   m_Layer: 5
-  m_Name: Text
+  m_Name: pressurseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3462,6 +3484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setPoint: {fileID: 36933207}
   freq: {fileID: 1933308790}
+  panelfreq: {fileID: 841304489}
+  panelpressure: {fileID: 1056117868}
   pressure: {fileID: 963792571}
 --- !u!1 &1228878522
 GameObject:
@@ -3474,6 +3498,7 @@ GameObject:
   - component: {fileID: 1228878525}
   - component: {fileID: 1228878524}
   - component: {fileID: 1228878523}
+  - component: {fileID: 1228878526}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3546,6 +3571,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1228878526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228878522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cc8247a605e62e4a951d6841f321f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  v3Force: {x: 0.1, y: 0, z: 0}
+  v3Force1: {x: 0, y: 0, z: 0.1}
+  v3Force2: {x: 0, y: 0.1, z: 0}
+  keyUp: 273
+  keyDown: 274
+  keyLeft: 119
+  keyRight: 115
+  keyforward: 275
+  keybackward: 276
 --- !u!1 &1230770761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,7 +4782,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Set point
+  m_Text: Set point ( 0.0 - 10.0 )
 --- !u!222 &1620539713
 CanvasRenderer:
   m_ObjectHideFlags: 0

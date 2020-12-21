@@ -15,7 +15,7 @@ public class motorRotation : MonoBehaviour
     void Update()
     {
         if (input.status){
-            transform.Rotate(Vector3.forward, moveSpeed );
+            transform.Rotate(Vector3.forward, input.frequency );
         }
         //trasform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
