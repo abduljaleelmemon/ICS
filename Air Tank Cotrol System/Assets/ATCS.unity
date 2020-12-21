@@ -3442,6 +3442,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fdad7c46cbd605642a7df900a7a9f6e9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9cd9e116a7b39e45a607470851e16cb, type: 3}
+--- !u!1 &1180618836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b9cd9e116a7b39e45a607470851e16cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1180618835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180618837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180618836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9411dcaff3ca54ba6360b1d9f028dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setPoint: {fileID: 36933207}
+  freq: {fileID: 1933308790}
+  pressure: {fileID: 963792571}
 --- !u!1 &1228878522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3784,7 +3805,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323653429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1180618837}
+        m_MethodName: valueAssign
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1323653429
 MonoBehaviour:
   m_ObjectHideFlags: 0

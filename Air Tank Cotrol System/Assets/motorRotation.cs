@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class motorRotation : MonoBehaviour
 {
-    public float moveSpeed = 6f;
+    public float moveSpeed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,9 @@ public class motorRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward, moveSpeed );
+        if (input.status){
+            transform.Rotate(Vector3.forward, moveSpeed );
+        }
         //trasform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
 }
