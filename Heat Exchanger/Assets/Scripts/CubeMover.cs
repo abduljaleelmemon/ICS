@@ -13,21 +13,22 @@ public class CubeMover : MonoBehaviour
 	KeyCode keyDown;
 	void Update(){
 	currentY = 360-transform.rotation.x;
-	   if(Input.GetKey(keyUp)) {
-		   if (currentY<360){
-		   Debug.Log("Pressed left click.");
-			transform.Rotate(d,0 ,0);
-			GameObject.FindGameObjectWithTag("MPin").GetComponent<Manometer>().RotateRight(gameObject,-2.3f);
-			GameObject.FindGameObjectWithTag("outerTank").GetComponent<steamIn>().OnSteamIn(gameObject,-1.45f);
+	   if(Input.GetKey(keyUp)) { //after pressing on left arrow this condition will execute 
+		   if (currentY<360)
+           {
+               Debug.Log("Pressed left click.");
+               transform.Rotate(d,0 ,0); // rotation of an object
+               GameObject.FindGameObjectWithTag("MPin").GetComponent<Manometer>().RotateRight(gameObject,-2.3f); // will access rotateright function from manometer script
+               GameObject.FindGameObjectWithTag("outerTank").GetComponent<steamIn>().OnSteamIn(gameObject, -1.45f); // will access onsteamin function from steamin script
 		   }
 	   }
 	   if(Input.GetKey(keyDown)){
            if (currentY > 359.1474)
            {
-		    Debug.Log("Pressed right click.");
-			transform.Rotate(-d,0 ,0);
-			GameObject.FindGameObjectWithTag("MPin").GetComponent<Manometer>().RotateLeft(gameObject,2.3f);
-			GameObject.FindGameObjectWithTag("outerTank").GetComponent<steamIn>().OnSteamIn(gameObject,1.45f);
+               Debug.Log("Pressed right click.");
+               transform.Rotate(-d,0 ,0); // rotation in opposite directiion
+               GameObject.FindGameObjectWithTag("MPin").GetComponent<Manometer>().RotateLeft(gameObject, 2.3f); // will access rotateright function from manometer script
+               GameObject.FindGameObjectWithTag("outerTank").GetComponent<steamIn>().OnSteamIn(gameObject, 1.45f); // will access onsteamin function from steamin script
 		   }
 	   }
 	}

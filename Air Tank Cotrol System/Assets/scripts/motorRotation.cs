@@ -14,7 +14,7 @@ public class motorRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.status){
+        if (input.status){ // rotation of motor, and will only rotate when status is true
             transform.Rotate(Vector3.forward, input.frequency );
         }
         //trasform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);

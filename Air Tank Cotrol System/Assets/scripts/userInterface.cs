@@ -12,19 +12,19 @@ public class userInterface : MonoBehaviour
     {
 
     }
-    public void MoveUp()
+    public void MoveUp() //for animation of menu
     {
         if (start == 0)
         {
-            menuDown.GetComponent<Animator>().Play("ui");
-            buttonDown.GetComponent<Animator>().Play("updown");
+            menuDown.GetComponent<Animator>().Play("ui"); //moving menu down after button is pressed
+            buttonDown.GetComponent<Animator>().Play("updown"); //rotating animation ater button is pressed 
             start = 1;
         }
         else
         {
             start = 0;
-            menuDown.GetComponent<Animator>().Play("uiDown");
-            buttonDown.GetComponent<Animator>().Play("downup");
+            menuDown.GetComponent<Animator>().Play("uiDown"); // moving menu up 
+            buttonDown.GetComponent<Animator>().Play("downup"); //rotating animation ater button is pressed 
         }
     }
     // Update is called once per frame

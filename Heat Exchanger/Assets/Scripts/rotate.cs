@@ -18,7 +18,7 @@ public class rotate : MonoBehaviour
  
     }
  
-    public void OnClickLeft () {
+    public void OnClickLeft () { // rotation on left click
        
         transform.Rotate(Vector3.forward*rotateSpeed*Time.deltaTime);
  

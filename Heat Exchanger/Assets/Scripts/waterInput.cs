@@ -11,20 +11,20 @@ public class waterInput : MonoBehaviour
     private float expectedWaterOutTemp = 0, waterOut = 0, waterIn = 0;
     private float TDC = 1.5435f, steamTemp = 0, temp=0;
     private float a = 100, b = 200, c = 1150, d = 600;
-    private bool x = false;
+    private bool check = false;
     public void Running()
     {
-        if (x == false) { 
+        if (check == false) { 
             expectedWaterOutTemp = float.Parse(finalTemprature.GetComponent<Text>().text);
             waterOut = float.Parse(initialTemprature.GetComponent<Text>().text);
-            x = true;
+            check = true;
         }
-        InvokeRepeating("increment", 2f, 2f);
+        InvokeRepeating("Increment", 2f, 2f);
     }
-    public void Stopping() {
-        CancelInvoke("increment");
+    public void Stopping() { // stopping increment e.g pausing the screen
+        CancelInvoke("Increment");
     }
-	void OnGUI()
+	void OnGUI() // GUI TEXT Showing different information
 	{
         GUIStyle style = new GUIStyle();
         style.fontStyle = FontStyle.Bold;
@@ -40,7 +40,7 @@ public class waterInput : MonoBehaviour
     void Start()
     {
 		waterOut=waterIn;
-		InvokeRepeating ("increment", 2f, 2f);
+		InvokeRepeating ("Increment", 2f, 2f);
         // Set the text
         tempC.text = "0 °C";
     }
@@ -51,11 +51,11 @@ public class waterInput : MonoBehaviour
 		TempChange();
         tempC.text = waterOut.ToString() + " °C";
 		if((int)waterOut==(int)expectedWaterOutTemp){
-			 CancelInvoke("increment");
+			 CancelInvoke("Increment");
 		}
 		
     }
-	void increment(){
+	void Increment(){
 		if(waterOut<temp)
             waterOut += 1;
 	}
@@ -63,7 +63,8 @@ public class waterInput : MonoBehaviour
 		steamTemp=GameObject.FindGameObjectWithTag("outerTank").GetComponent<steamIn>().GetSteamTemp();
 		if(steamTemp>0){
             temp=expectedWaterOutTemp-waterIn;
-            temp=temp/TDC;temp=steamTemp-temp;
+            temp=temp/TDC;
+            temp=steamTemp-temp;
         }
 	}
 }

@@ -30,22 +30,22 @@ public class cameraMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(keyUp))
+        if (Input.GetKey(keyUp)) //camera movemet in upward direction
             //GetComponent<Rigidbody>().velocity += v3Force;
             transform.position += v3Force2;
-        if (Input.GetKey(keyDown))
+        if (Input.GetKey(keyDown)) //camera movement in downward direction
             //GetComponent<Rigidbody>().velocity -= v3Force;
             transform.position -= v3Force2;
-        if (Input.GetKey(keyLeft))
+        if (Input.GetKey(keyLeft)) //camera movement in left direction
             //GetComponent<Rigidbody>().velocity += v3Force;
             transform.position += v3Force1;
-        if (Input.GetKey(keyRight))
+        if (Input.GetKey(keyRight)) //camera movement in right direction
             //GetComponent<Rigidbody>().velocity -= v3Force;
             transform.position -= v3Force1;
-        if (Input.GetKey(keyForward))
+        if (Input.GetKey(keyForward)) //camera movement in forward direction e.g close to plant
             //GetComponent<Rigidbody>().velocity += v3Force;
             transform.position += v3Force;
-        if (Input.GetKey(keyBackward))
+        if (Input.GetKey(keyBackward)) //camera movement in backward direction e.g away from plant
             //GetComponent<Rigidbody>().velocity -= v3Force;
             transform.position -= v3Force;
     }
